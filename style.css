@@ -1,0 +1,46 @@
+.title{
+    text-align: center;   
+}
+.title::before{
+    content: "\26B9";
+}
+.title::after{
+    content: "\26B9";
+}
+.link::before{
+    content:url(./assets/icons/account-cowboy-hat.svg);
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+
+}
+.link:hover::before{
+    content:url(./assets/icons/account-cowboy-hat-outline.svg)
+}
+.paper{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    margin: auto;
+    position: relative;
+}
+.paper::before,
+.paper::after{
+    width: 200px;
+    height: 200px;
+    display: block;
+    background-color: pink;
+    margin: auto;
+    position: absolute;
+    box-shadow: 3px 3px 3px 0px rgba(179,179,179,1);
+}
+.paper::before{
+    background-color:gold;
+    z-index: -10;
+    transform: rotate(3deg) translateX(2px);
+}
+.paper::after{
+    background-color:lightblue;
+    z-index: -2;
+    transform: rotate(-2deg) translateY(2px);
+}
